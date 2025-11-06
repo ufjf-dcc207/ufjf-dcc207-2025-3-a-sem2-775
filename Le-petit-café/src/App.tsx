@@ -7,7 +7,7 @@ const produtos = [
     icone: "🥐",
     nome: "Aurore Parisienne",
     ingredientes: ["Croissant tradicional ou de amêndoas"],
-    preco: "R$ 8,00"
+    preco: "R$ 8,99"
   },
   {
     icone: "🥖",
@@ -19,14 +19,14 @@ const produtos = [
     icone: "☕️",
     nome: "Souffle du Jour",
     ingredientes: ["Cappuccino ou Latte cremoso, com toque de canela."],
-    preco: "R$ 6,50"
+    preco: "R$ 8,50"
     
   },
     {
     icone: "🥤",
     nome: "Jardin secret",
     ingredientes: ["Chá gelado ou Limonada de frutas vermelhas."],
-    preco: "R$ 6,50"
+    preco: "R$ 8,90"
     
   }
 ];
