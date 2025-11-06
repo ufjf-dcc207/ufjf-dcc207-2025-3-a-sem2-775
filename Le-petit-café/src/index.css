@@ -2,12 +2,15 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  place-content: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
-  /* background-image precisa usar url() e o nome/extensão corretos */
   background-image: url('./assets/fundo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+  overflow-x: hidden;
 }

@@ -2,25 +2,32 @@
 import './App.css'
 import { CardProduto } from "./components/CardProduto";
 
-// Dados dos produtos (poderia vir de uma API ou banco de dados)
 const produtos = [
   {
     icone: "🥐",
     nome: "Aurore Parisienne",
-    ingredientes: ["Farinha de trigo", "Água", "Fermento", "Sal"],
+    ingredientes: ["Croissant tradicional ou de amêndoas"],
     preco: "R$ 8,00"
   },
   {
-    icone: "☕",
-    nome: "Café Expresso",
-    ingredientes: ["Café arábica", "Água filtrada"],
-    preco: "R$ 5,00"
+    icone: "🥖",
+    nome: "Baguette Rêvée",
+    ingredientes: ["Sanduíche de Baguete (por ex., presunto e queijo)"],
+    preco: "R$ 12,00"
   },
   {
-    icone: "🥖",
-    nome: "Baguette",
-    ingredientes: ["Farinha de trigo", "Fermento", "Sal", "Água"],
+    icone: "☕️",
+    nome: "Souffle du Jour",
+    ingredientes: ["Cappuccino ou Latte cremoso, com toque de canela."],
     preco: "R$ 6,50"
+    
+  },
+    {
+    icone: "🥤",
+    nome: "Jardin secret",
+    ingredientes: ["Chá gelado ou Limonada de frutas vermelhas."],
+    preco: "R$ 6,50"
+    
   }
 ];
 
