@@ -1,18 +1,18 @@
-import "./card.css";
+import "../card.css";
 
-interface opcao1Props {
+interface CardProdutoProps {
   icone?: string;
   nome?: string;
   ingredientes?: string[];
   preco?: string;
 }
 
-export default function Opcao1({
-   icone="🥐",
-   nome = "Aurore Parisienne",
-   ingredientes = ["Farinha de trigo", "Água", "Fermento", "Sal"],
-   preco = "R$ 5,00",
-  }: opcao1Props) {
+export function CardProduto({
+   icone = "🥐",
+   nome = "Produto",
+   ingredientes = [],
+   preco = "R$ 0,00",
+}: CardProdutoProps) {
   return (
     <div className="card-produto">
       <div>{icone}</div>
@@ -20,6 +20,5 @@ export default function Opcao1({
       <div>{ingredientes.join(", ")}</div>
       <div>{preco}</div>
     </div>
-
   );
 }
