@@ -1,0 +1,61 @@
+.opcao1 {
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1.6rem 4rem;  
+    background-color: rgba(109, 86, 59, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-areas: 
+        "icone nome nome nome nome"
+        "icone ingr ingr preco preco";
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;  
+    gap: 1rem;  
+    min-width: 1100px;
+    max-width: 1400px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #fff;
+}
+
+.opcao1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.opcao1 div:nth-child(1) {
+    grid-area: icone;
+    font-size: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1.5rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.opcao1 div:nth-child(2) {
+    grid-area: nome;
+    font-size: 2.4rem;
+    font-weight: 700;
+    align-self: center;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.5px;
+}
+
+.opcao1 div:nth-child(3) {
+    grid-area: ingr;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.3;
+    align-self: center;
+}
+
+.opcao1 div:nth-child(4) {
+    grid-area: preco;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffd700;
+    justify-self: end;
+    align-self: center;
+    padding-right: 2rem;
+}
