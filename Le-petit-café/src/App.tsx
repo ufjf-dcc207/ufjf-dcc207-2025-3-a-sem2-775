@@ -2,6 +2,7 @@
 import './App.css'
 import { useState } from 'react';
 import { CardProduto } from "./components/CardProduto";
+import { Carrinho } from "./components/Carrinho";
 
 interface ItemCarrinho {
   icone: string;
@@ -56,19 +57,45 @@ function App() {
       setCarrinho([...carrinho, { ...produto, quantidade: 1 }]);
     }
   }
+ 
+  function removerDoCarrinho(nome: string) {
+    setCarrinho(carrinho.filter(item => item.nome !== nome));
+  }
+ 
+  function aumentarQuantidade(nome: string) {
+    setCarrinho(carrinho.map(item =>
+      item.nome === nome ? { ...item, quantidade: item.quantidade + 1 } : item
+    ));
+  }
+ 
+  function diminuirQuantidade(nome: string) {
+    setCarrinho(carrinho
+      .map(item => item.nome === nome ? { ...item, quantidade: item.quantidade - 1 } : item)
+      .filter(item => item.quantidade > 0)
+    );
+  }
 
   return (
     <div className="app">
-      {produtos.map((produto, index) => (
-        <CardProduto
-          key={index}
-          icone={produto.icone}
-          nome={produto.nome}
-          ingredientes={produto.ingredientes}
-          preco={produto.preco}
-          onAdicionar={() => adicionarAoCarrinho(produto)}
-        />
-      ))}
+      <div className="produtos-lista">
+        {produtos.map((produto, index) => (
+          <CardProduto
+            key={index}
+            icone={produto.icone}
+            nome={produto.nome}
+            ingredientes={produto.ingredientes}
+            preco={produto.preco}
+            onAdicionar={() => adicionarAoCarrinho(produto)}
+          />
+        ))}
+      </div>
+
+      <Carrinho
+        itens={carrinho}
+        onRemove={removerDoCarrinho}
+        onIncrease={aumentarQuantidade}
+        onDecrease={diminuirQuantidade}
+      />
     </div>
   );
 }
