@@ -5,6 +5,7 @@ interface CardProdutoProps {
   nome?: string;
   ingredientes?: string[];
   preco?: string;
+  onAdicionar?: () => void;
 }
 
 export function CardProduto({
@@ -12,6 +13,7 @@ export function CardProduto({
    nome = "Produto",
    ingredientes = [],
    preco = "R$ 0,00",
+   onAdicionar,
 }: CardProdutoProps) {
   return (
     <div className="card-produto">
@@ -19,6 +21,7 @@ export function CardProduto({
       <div>{nome}</div>
       <div>{ingredientes.join(", ")}</div>
       <div>{preco}</div>
+      <button onClick={onAdicionar}>Adicionar ao Carrinho</button>
     </div>
   );
 }

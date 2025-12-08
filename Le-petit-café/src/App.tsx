@@ -1,6 +1,15 @@
 
 import './App.css'
+import { useState } from 'react';
 import { CardProduto } from "./components/CardProduto";
+
+interface ItemCarrinho {
+  icone: string;
+  nome: string;
+  ingredientes: string[];
+  preco: string;
+  quantidade: number;
+}
 
 const produtos = [
   {
@@ -32,6 +41,22 @@ const produtos = [
 ];
 
 function App() {
+  const [carrinho, setCarrinho] = useState<ItemCarrinho[]>([]);
+
+  function adicionarAoCarrinho(produto: typeof produtos[0]) {
+    const itemExistente = carrinho.find(item => item.nome === produto.nome);
+    
+    if (itemExistente) {
+      setCarrinho(carrinho.map(item =>
+        item.nome === produto.nome
+          ? { ...item, quantidade: item.quantidade + 1 }
+          : item
+      ));
+    } else {
+      setCarrinho([...carrinho, { ...produto, quantidade: 1 }]);
+    }
+  }
+
   return (
     <div className="app">
       {produtos.map((produto, index) => (
@@ -41,6 +66,7 @@ function App() {
           nome={produto.nome}
           ingredientes={produto.ingredientes}
           preco={produto.preco}
+          onAdicionar={() => adicionarAoCarrinho(produto)}
         />
       ))}
     </div>
