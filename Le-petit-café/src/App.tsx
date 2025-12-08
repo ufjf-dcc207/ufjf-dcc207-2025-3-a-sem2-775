@@ -16,7 +16,7 @@ const produtos = [
     preco: "R$ 12,00"
   },
   {
-    icone: "☕️",
+    icone: "☕",
     nome: "Souffle du Jour",
     ingredientes: ["Cappuccino ou Latte cremoso, com toque de canela."],
     preco: "R$ 8,50"

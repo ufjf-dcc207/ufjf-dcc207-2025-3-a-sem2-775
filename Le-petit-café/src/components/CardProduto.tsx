@@ -8,7 +8,7 @@ interface CardProdutoProps {
 }
 
 export function CardProduto({
-   icone = "🥐",
+   icone,
    nome = "Produto",
    ingredientes = [],
    preco = "R$ 0,00",
