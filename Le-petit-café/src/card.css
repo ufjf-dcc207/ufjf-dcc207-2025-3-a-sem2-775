@@ -62,17 +62,18 @@
 
 /* botão do card */
 .card-produto button {
-    /* posiciona ao lado do preço */
-    grid-area: preco;
+    /* posiciona abaixo do preço (colunas 4-5), em nova linha do grid */
+    grid-column: 4 / 6;
+    grid-row: 3;
     justify-self: end;
-    align-self: center;
+    align-self: start;
     background: #ffd700;
     color: #222;
     border: none;
     padding: 0.5rem 0.8rem;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 0;
+    margin-top: 0.8rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     font-weight: 600;
 }
@@ -83,21 +84,23 @@
 /* carrinho (sidebar) */
 .carrinho {
     position: fixed;
-    right: 20px;
-    top: 20px;
-    width: 320px;
-    max-height: calc(100vh - 40px);
+    right: 28px;
+    top: 28px;
+    width: 360px;
+    min-height: 140px;
+    max-height: calc(100vh - 56px);
     overflow: auto;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
     color: #fff;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    border-radius: 12px;
+    padding: 1.1rem;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.65);
     z-index: 40;
 }
 
 .carrinho h3 {
     margin: 0 0 0.6rem 0;
+    font-size: 1.05rem;
 }
 
 .carrinho-item {
