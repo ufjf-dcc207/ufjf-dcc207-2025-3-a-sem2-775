@@ -1,4 +1,4 @@
-import "../card.css";
+import "./carrinho.css";
 
 interface ItemCarrinhoProps {
   icone: string;
