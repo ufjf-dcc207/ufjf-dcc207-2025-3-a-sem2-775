@@ -86,21 +86,29 @@
     position: fixed;
     right: 28px;
     top: 28px;
+    bottom: 28px;
     width: 360px;
-    min-height: 140px;
-    max-height: calc(100vh - 56px);
-    overflow: auto;
-    background: rgba(0,0,0,0.75);
+    background-color: rgba(109, 86, 59, 0.9);
     color: #fff;
     border-radius: 12px;
     padding: 1.1rem;
     box-shadow: 0 8px 26px rgba(0,0,0,0.65);
     z-index: 40;
+    display: flex;
+    flex-direction: column;
 }
 
 .carrinho h3 {
     margin: 0 0 0.6rem 0;
     font-size: 1.05rem;
+}
+
+.carrinho ul {
+    flex: 1;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .carrinho-item {
@@ -125,7 +133,7 @@
 }
 .carrinho-acoes button:hover { opacity: 0.95; transform: translateY(-1px); }
 
-.carrinho-total { margin-top: 0.6rem; font-weight: 700; text-align: right; }
+.carrinho-total { margin-top: auto; padding-top: 0.8rem; border-top: 1px solid rgba(255,255,255,0.2); font-weight: 700; text-align: right; }
 
 @media (max-width: 900px) {
   .carrinho {
